@@ -88,13 +88,68 @@ function updateClock () {
 }
 }
 
-
-
-
-
-
-
 setClock ('timer', deadline);
+
+let more = document.querySelector('.more'),
+    overlay = document.querySelector('.overlay'),
+    close = document.querySelector ('.popup-close');
+
+   
+
+
+
+    function modalWind (btn) {
+     
+        btn.addEventListener('click', function () {
+            overlay.style.display = 'block';
+            this.classList.add('more-splash');
+            document.body.style.overflow = 'hidden';
+            
+        });
+
+        close.addEventListener('click', function () {
+            overlay.style.display = 'none';
+            btn.classList.remove('more-splash');
+            document.body.style.overflow = '';
+        
+            });
+
+     }
+
+    modalWind (more);
+
+
+    //more.addEventListener('click', function () {
+     //   overlay.style.display = 'block';
+     //   this.classList.add('more-splash');
+      //  document.body.style.overflow = 'hidden';
+        
+   // });
+
+  //  close.addEventListener('click', function () {
+  //  overlay.style.display = 'none';
+   // more.classList.remove('more-splash');
+    //document.body.style.overflow = '';
+
+   // });
+
+
+
+
+
+console.log(tabContent[3].querySelector('.description-btn'));
+
+
+function yoga (tabb) {
+
+    let tc = tabb.querySelector('.description-btn');
+    modalWind (tc);
+ 
+}
+
+for (let i = 0; i < tabContent.length; i++) {
+    yoga (tabContent[i]);
+}
 
 });
 
