@@ -8,4 +8,9 @@
 
 console.log(bb("Петя", "Иванов"));
 
- 
+let div = document.createElement('div');
+div.className = 'fuck';
+div.innerHTML = 'fgbrsbrstbrthbwbrybhsryhsy';
+document.body.appendChild(div);
+
+console.log(div);
