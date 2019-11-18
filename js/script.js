@@ -266,6 +266,7 @@ form1.addEventListener('submit', function (event) {
 
    
    request.addEventListener('readystatechange', function() {
+<<<<<<< HEAD
 
 
     function postData () {
@@ -295,6 +296,15 @@ form1.addEventListener('submit', function (event) {
 
 
 
+=======
+    if (request.readyState < 4) {
+        statusMessage.innerHTML = message.loading;
+    } else if(request.readyState === 4 && request.status == 200) {
+        statusMessage.innerHTML = message.success;
+    } else {
+        statusMessage.innerHTML = message.failure;
+    }
+>>>>>>> 6d80fb77ed0c718a78dda814235b502fd6d451cc
 });
 
 
